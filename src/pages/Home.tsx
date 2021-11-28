@@ -1,13 +1,15 @@
 import Row from '../components/Row';
 import { moviesData } from '../components/data';
 import { RowProps } from '../components/interfaces';
-import { withLoading } from '../components/withLoader';
+import withFetch from '../components/withData';
 
 function Home() {
+  const RowWithData = withFetch(Row);
+
   return (
     <div>
       {moviesData.map((movieData: RowProps, idx) => (
-        <Row key={idx} url={movieData.url} title={movieData.title} />
+        <RowWithData key={idx} url={movieData.url} title={movieData.title} />
       ))}
     </div>
   );

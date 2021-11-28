@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Movie, MovieList, RowProps } from './interfaces';
+import { MovieList, RowProps } from './interfaces';
 
 function withFetch(WrappedComponent: React.ComponentType<any>) {
   const WithFetch = (props: RowProps) => {
@@ -15,7 +15,7 @@ function withFetch(WrappedComponent: React.ComponentType<any>) {
         const response = await fetch(url);
         if (response.ok) {
           const data = await response.json();
-          setData(data);
+          setData(data.results);
         } else {
           throw new Error('Fetch request error');
         }
