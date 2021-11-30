@@ -7,27 +7,20 @@
   flex-direction: row;
   overflow-y: scroll;
   align-items: center;
-  height: 300px;
-  margin: 20px 0;
-  p {
-    display: none;
-  }
-  h2 {
-    display: none;
-  }
-}
-
-.movie__item {
-  img {
-    object-fit: cover;
-    height: 200px;
-    width: 300px;
-    margin: 10px;
-    transition: 0.2s 0.05s;
-    &:hover {
-      transition-delay: 0.5s;
-      cursor: pointer;
-      transform: scale(1.5);
+  .movie__item {
+    p {
+      display: none;
+    }
+    h2 {
+      display: none;
+    }
+    img {
+      border-radius: 5px;
+      object-fit: cover;
+      height: 140px;
+      width: 250px;
+      margin: 3px;
+      transition: 0.2s 0.05s;
     }
   }
 }

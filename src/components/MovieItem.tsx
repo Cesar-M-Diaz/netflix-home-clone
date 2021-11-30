@@ -4,19 +4,13 @@ import '../assets/styles/components/Movies.scss';
 
 interface Props {
   data: Movie[] | undefined;
+  render: (movie: Movie) => JSX.Element;
 }
 
-export const MovieItem: FC<Props> = ({ data }) => (
+export const MovieItem: FC<Props> = ({ data, render }) => (
   <div className="movies__container">
-    {data?.map((movie) => (
-      <div key={movie.id} className="movie__item">
-        <h2>{movie.name || movie.title}</h2>
-        <img
-          src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-          alt={movie.name || movie.title}
-        />
-        <p>{movie.overview}</p>
-      </div>
-    ))}
+    {data?.map((movie) => {
+      return render(movie);
+    })}
   </div>
 );

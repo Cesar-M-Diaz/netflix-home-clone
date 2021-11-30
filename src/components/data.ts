@@ -17,35 +17,35 @@ export enum Urls {
 
 export const moviesData: RowProps[] = [
   {
-    title: 'netflix originals',
+    title: 'Only on Netflix',
     url: 'https://api.themoviedb.org/3/discover/tv?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&with_networks=213',
   },
   {
-    title: 'trending',
+    title: 'Trending Now',
     url: 'https://api.themoviedb.org/3/trending/all/week?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&language=en-US',
   },
   {
-    title: 'action',
+    title: 'Action',
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&with_genres=28',
   },
   {
-    title: 'comedy',
+    title: 'Comedies',
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&with_genres=35',
   },
   {
-    title: 'horror',
+    title: 'Horror',
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&with_genres=27',
   },
   {
-    title: 'romance',
+    title: 'Romance',
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&with_genres=10749',
   },
   {
-    title: 'kids',
+    title: 'Kids',
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&with_genres=10751',
   },
   {
-    title: 'tv',
+    title: 'Tv Shows',
     url: 'https://api.themoviedb.org/3/discover/tv?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&sort_by=popularity.desc&page=1',
   },
   // {
@@ -53,11 +53,11 @@ export const moviesData: RowProps[] = [
   //   url: 'https://api.themoviedb.org/3/search/multi?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&language=en-US&query=',
   // },
   {
-    title: 'documentaries',
+    title: 'Provocative Documentaries',
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&with_genres=99',
   },
   {
-    title: 'animation',
+    title: 'Animation',
     url: 'https://api.themoviedb.org/3/discover/movie?api_key=e35de6c99ae117ba7eb0e0fbf06e722e&with_genres=16',
   },
 ];

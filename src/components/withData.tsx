@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { MovieList, RowProps } from './interfaces';
+import { MovieList, withFetchProps } from './interfaces';
 
-function withFetch(WrappedComponent: React.ComponentType<any>) {
-  const WithFetch = (props: RowProps) => {
+function withFetch<OriginalProps extends withFetchProps>(
+  WrappedComponent: React.ComponentType<OriginalProps>,
+) {
+  const WithFetch = (props: OriginalProps) => {
     const [data, setData] = useState<MovieList>();
-    const url: string = props.url;
+    const url = props.url;
 
     useEffect(() => {
-      if (url) fetchData(url);
+      fetchData(url);
     }, [url]);
 
     const fetchData = async (url: string) => {
@@ -22,7 +24,7 @@ function withFetch(WrappedComponent: React.ComponentType<any>) {
       } catch (err) {}
     };
 
-    return <WrappedComponent data={data} {...props} />;
+    return <WrappedComponent {...props} data={data} />;
   };
 
   return WithFetch;

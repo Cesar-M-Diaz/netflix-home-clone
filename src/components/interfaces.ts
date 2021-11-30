@@ -14,3 +14,9 @@ export interface RowProps {
   url: string;
   title: string;
 }
+
+export interface withFetchProps {
+  data?: Movie[];
+  title?: string;
+  url: string;
+}
