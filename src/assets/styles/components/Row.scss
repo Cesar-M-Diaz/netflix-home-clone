@@ -3,6 +3,9 @@
   z-index: 2;
   height: 250px;
   margin-left: 60px;
+  .row__images {
+    transition: 0.2s ease-in-out;
+  }
   .row__arrow-back,
   .row__arrow-forward {
     z-index: 3;

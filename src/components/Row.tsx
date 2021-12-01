@@ -5,21 +5,19 @@ import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
 import '../assets/styles/components/Row.scss';
 
 const Row: FC<withFetchProps> = ({ data, title }) => {
-  const [isMoved, setIsMoved] = useState(false);
   const [slideNumber, setSlideNumber] = useState(0);
 
   const listRef: any = useRef();
 
-  const handleClick = (direction: string) => {
-    setIsMoved(true);
+  const handleClick = (direction: string): void => {
     let distance = listRef.current.getBoundingClientRect().x - 60;
     if (direction === 'left' && slideNumber > 0) {
       setSlideNumber(slideNumber - 1);
-      listRef.current.style.transform = `translateX(${256 + distance}px)`;
+      listRef.current.style.transform = `translateX(${1650 + distance}px)`;
     }
-    if (direction === 'right' && slideNumber < 14) {
+    if (direction === 'right' && slideNumber < 2) {
       setSlideNumber(slideNumber + 1);
-      listRef.current.style.transform = `translateX(${-256 + distance}px)`;
+      listRef.current.style.transform = `translateX(${-1650 + distance}px)`;
     }
   };
 
