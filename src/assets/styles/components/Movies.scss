@@ -10,21 +10,13 @@
 }
 
 .movie__item {
-  .movie__item__play {
-    position: absolute;
-    opacity: 0;
-    bottom: 0;
-    transition: 0.2s;
-    transition-delay: 0.3s;
-    font-size: 30px;
-  }
   h2 {
     opacity: 0;
-    bottom: 0;
     position: absolute;
+    bottom: 0;
     transition: 0.2s;
     transition-delay: 0.3s;
-    width: 240px;
+    width: 200px;
     text-align: left;
     font-size: 15px;
   }
@@ -40,15 +32,7 @@
   &:hover {
     cursor: pointer;
     img {
-      transform: translateY(-80px);
-    }
-    h2 {
-      transform: translateY(-50px);
-      opacity: 1;
-    }
-    .movie__item__play {
-      transform: translateY(-95px);
-      opacity: 1;
+      transform: scale(1.5);
     }
   }
 }
