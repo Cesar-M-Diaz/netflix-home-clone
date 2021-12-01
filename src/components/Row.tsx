@@ -2,6 +2,8 @@ import { FC, useState, useRef } from 'react';
 import { MovieItem } from './MovieItem';
 import { withFetchProps } from './interfaces';
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md';
+import { AiFillPlayCircle } from 'react-icons/ai';
+import { IoIosAddCircleOutline } from 'react-icons/io';
 import '../assets/styles/components/Row.scss';
 
 const Row: FC<withFetchProps> = ({ data, title }) => {
@@ -41,7 +43,10 @@ const Row: FC<withFetchProps> = ({ data, title }) => {
                 src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`}
                 alt={movie.name || movie.title}
               />
-              <p>{movie.overview}</p>
+              <div className="movie__item__play">
+                <AiFillPlayCircle />
+                <IoIosAddCircleOutline />
+              </div>
             </div>
           )}
         />
