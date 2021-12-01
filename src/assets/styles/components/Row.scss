@@ -2,11 +2,41 @@
   position: relative;
   z-index: 2;
   height: 250px;
-  padding-left: 60px;
+  margin-left: 60px;
+  .row__arrow-back,
+  .row__arrow-forward {
+    z-index: 3;
+    opacity: 0;
+    box-sizing: border-box;
+    position: absolute;
+    top: 48%;
+    left: -60px;
+    padding-left: 10px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 140px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &.hidden {
+      visibility: hidden;
+    }
+  }
+  .row__arrow-forward {
+    left: auto;
+    right: 0px;
+  }
   h1 {
     color: #e5e5e5e5;
     text-align: left;
     font-size: 1.5rem;
     margin: 20px 0 15px 0;
+  }
+  &:hover {
+    .row__arrow-back,
+    .row__arrow-forward {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.555);
+      color: #fff;
+    }
   }
 }
