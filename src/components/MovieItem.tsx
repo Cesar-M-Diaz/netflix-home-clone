@@ -8,9 +8,7 @@ interface Props {
 }
 
 export const MovieItem: FC<Props> = ({ data, render }) => (
-  <div className="movies__container">
-    {data?.map((movie) => {
-      return render(movie);
-    })}
-  </div>
+  // if i only pass render inside map i wont have to use the regular sintax
+  // the syntax already happens within the render prop
+  <div className="movies__container">{data?.map(render)}</div>
 );
